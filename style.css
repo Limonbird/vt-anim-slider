@@ -133,7 +133,7 @@ p {
 
 .slide__headers--wrapper {
   margin-top: 173px;
-  z-index: 2;
+  z-index: 100;
   position: relative;
 }
 
@@ -195,7 +195,7 @@ p {
 }
 
 .slide-content--wrapper {
-  margin-top: 97px;
+  padding-top: 97px;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -216,7 +216,7 @@ p {
 
 .slide-content--active {
   opacity: 1;
-  top: 0;
+  top: 95px;
   visibility: visible;
 }
 
