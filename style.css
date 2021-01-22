@@ -267,7 +267,7 @@ p {
   line-height: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: url(/img/next-ico.svg) no-repeat center left;
+  background: url(./img/next-ico.svg) no-repeat center left;
   padding-left: 55px;
   text-decoration: none;
   color: white;
