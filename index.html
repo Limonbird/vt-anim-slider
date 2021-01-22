@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="slider">
+            <!-- картинки -->
+            <div class="slider-images__wrapper">
+                <div class="slide-image slide-image--active">
+                    <img src="/img/openkam.jpg" alt="">
+                </div>
+                <div class="slide-image">
+                    <img src="/img/advent.jpg" alt="">
+                </div>
+                <div class="slide-image">
+                    <img src="/img/safetrav.jpg" alt="">
+                </div>
+            </div>
+            <!-- / картинки -->
+            <!-- заголовки -->
+            <div class="slide__headers--wrapper">
+                <div class="full-slide slider-item--1 full-slide--active">
+                    <div class="slide__header">
+                        <span class="header-item pre-prev">Приключения<br />без границ</span>
+                        <span class="header-item prev"><span class="header__link"
+                                @click="prev">Путешествуй<br />безопасно</span></span>
+                        <span class="header-item current">Открой свою<br />Камчатку</span>
+                        <span class="header-item next"><span class="header__link" @click="next">Приключения<br />без
+                                границ</span></span>
+                        <span class="header-item post-next">Путешествуй<br />безопасно</span>
+                    </div>
+
+                </div>
+                <div class="full-slide slider-item--2">
+                    <div class="slide__header">
+                        <span class="header-item pre-prev">Путешествуй<br />безопасно</span>
+                        <span class="header-item prev"><span class="header__link" @click="prev">Открой
+                                свою<br />Камчатку</span></span>
+                        <span class="header-item current">Приключения<br />без границ</span>
+                        <span class="header-item next"><span class="header__link"
+                                @click="next">Путешествуй<br />безопасно</span></span>
+                        <span class="header-item post-next">Открой свою<br />Камчатку</span>
+                    </div>
+
+                </div>
+                <div class="full-slide slider-item--3">
+                    <div class="slide__header">
+                        <span class="header-item pre-prev">Открой свою<br />Камчатку</span>
+                        <span class="header-item prev"><span class="header__link" @click="prev">Приключения<br />без
+                                границ</span></span>
+                        <span class="header-item current">Путешествуй<br />безопасно</span>
+                        <span class="header-item next"><span class="header__link" @click="next">Открой
+                                свою<br />Камчатку</span></span>
+                        <span class="header-item post-next">Приключения<br />без границ</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- / заголовки -->
+            <!-- содержимое слайдов -->
+            <div class="slide-content--wrapper">
+                <div class="slide-content slide-content--active">
+                    <div class="slide-content__title">Экскурсии по Камчатке</div>
+                    <div class="slide-content__desc">
+                        <p>Популярные достопримечательности и неизведанные места полуострова: Долина гейзеров и
+                            Курильское озеро, природные парки, горы, вулканы и уединенные горячие источники.</p>
+                    </div>
+                    <div class="slide-content__links">
+                        <a href="#!" class="slide-link">Вертолетные<br>экскурсии</a>
+                        <a href="#!" class="slide-link">Автомобильные<br>экскурсии</a>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-content__title">Индивидуальные программы отдыха</div>
+                    <div class="slide-content__desc">
+                        <p>Вертолетные и автомобильные туры, охота, рыбалка — составим любую программу с сервисом
+                            бизнесс-класса под ваши пожелания.</p>
+                    </div>
+                    <div class="slide-content__links">
+                        <a href="#!" class="slide-link">Вертолетные<br>VIP-туры</a>
+                        <a href="#!" style="padding-top: 8px;" class="slide-link">Охота</a>
+                        <a href="#!" style="padding-top: 8px;" class="slide-link">Рыбалка</a>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-content__title">Безопасность и комфорт</div>
+                    <div class="slide-content__desc">
+                        <p>МЫ УДЕЛЯЕМ особое ВНИМАНИЕ БЕЗОПАСНОСТИ ТУРИСТОВ: ЛЕТАЕМ С АВИАКОМПАНИЕЙ-ПАРТНЕРОМ
+                            «ВИТЯЗЬ-АЭРО», ВЕРТОЛЕТЫ которой ПРОХОДЯТ ЕЖЕДНЕВНЫЙ ТЕХОСМОТР. АВТОМОБИЛЬНЫЕ ТУРЫ ПРОХОДЯТ
+                            НА ПАССАЖИРСКИХ «ВАХТОВКАХ» УРАЛ И КАМАЗ 2018–2019 ГОДОВ ВЫПУСКА.</p>
+                        <p>В СТОИМОСТЬ ВСЕХ ЭКСКУРСИЙ ВКЛЮЧЕНЫ: ГОРЯЧИЕ ПИТАНИЕ, СТРАХОВКА и трансфер из основных
+                            гостиниц и баз отдыха до места начала экскурсии.</p>
+                    </div>
+                    <div class="slide-content__links">
+                        <a href="#!" style="padding-top: 8px;" class="slide-link">О компании</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- / содержимое слайдов -->
+        </div>
+        <p>asfd </p>
+        <p>asdf </p>
+        <p>asdf </p>
+        <p>asdf </p>
+        <p>asdf </p>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+        },
+        methods: {
+            next() {
+                // сдвинуть активный header
+                let activeslide = document.querySelector("div.full-slide--active");
+                activeslide.style.transform = 'translateX(-50%)';
+
+                // сбросить трансформ header-a после анимации                
+                setTimeout(() => activeslide.style.transform = 'translateX(0)', 2000);
+
+                //перекинуть класс active на послед header
+                setTimeout(() => activeslide.classList.toggle('full-slide--active'), 2000);
+                setTimeout(() => activeslide.nextElementSibling.classList.toggle('full-slide--active'), 2000);
+
+                //если послед header-a нет, задать active первому header-y
+                if (activeslide.nextElementSibling === null) {
+                    setTimeout(() => document.querySelector('div.full-slide').classList.toggle('full-slide--active'), 2000);
+                }
+
+                //содержимое слайда
+
+                //при нажатии - добавить опасити, чтобы получился фейд
+                let slidecontent = document.querySelector('.slide-content--active');
+                slidecontent.style.opacity = '0';
+                setTimeout(() => slidecontent.style.opacity = '', 2000);
+
+
+                //перекинуть класс active на послед слайд
+                setTimeout(() => slidecontent.classList.toggle('slide-content--active'), 1000);
+                setTimeout(() => slidecontent.nextElementSibling.classList.toggle('slide-content--active'), 1000);
+
+                //если послед слайда нет, задать active первому слайду
+                if (slidecontent.nextElementSibling === null) {
+                    setTimeout(() => document.querySelector('div.slide-content').classList.toggle('slide-content--active'), 1000);
+                }
+
+                // фото
+
+                let imageslide = document.querySelector(".slide-image--active");
+
+                imageslide.style.opacity = '0';
+                setTimeout(() => imageslide.style.opacity = '', 2000);
+
+                setTimeout(() => imageslide.classList.toggle('slide-image--active'), 1000);
+                setTimeout(() => imageslide.nextElementSibling.classList.toggle('slide-image--active'), 1000);
+
+                if (imageslide.nextElementSibling === null) {
+                    setTimeout(() => document.querySelector('.slide-image').classList.toggle('slide-image--active'), 1000);
+                }
+
+                //запретить на время анимации и вернуть после нее
+                document.querySelector('.slider').style.pointerEvents = 'none';
+                setTimeout(() => document.querySelector('.slider').style.pointerEvents = 'auto', 2000);
+            },
+            prev() {
+                let activeslide = document.querySelector("div.full-slide--active");
+                activeslide.style.transform = 'translateX(50%)';
+
+                setTimeout(() => activeslide.style.transform = 'translateX(0)', 2000);
+                setTimeout(() => activeslide.classList.toggle('full-slide--active'), 2000);
+                setTimeout(() => activeslide.previousElementSibling.classList.toggle('full-slide--active'), 2000);
+                if (activeslide.previousElementSibling === null) {
+                    setTimeout(() => document.querySelector('.slide__headers--wrapper').lastChild.classList.toggle('full-slide--active'), 2000);
+                }
+
+                //содержимое слайда
+
+                //при нажатии - добавить опасити, чтобы получился фейд
+                let slidecontent = document.querySelector('.slide-content--active');
+                slidecontent.style.opacity = '0';
+                setTimeout(() => slidecontent.style.opacity = '', 2000);
+
+
+                //перекинуть класс active на послед слайд
+                setTimeout(() => slidecontent.classList.toggle('slide-content--active'), 1000);
+                setTimeout(() => slidecontent.previousElementSibling.classList.toggle('slide-content--active'), 1000);
+
+                //если послед слайда нет, задать active первому слайду
+                if (slidecontent.previousElementSibling === null) {
+                    setTimeout(() => document.querySelector('.slide-content--wrapper').lastChild.classList.toggle('slide-content--active'), 1000);
+                }
+
+                document.querySelector('.slider').style.pointerEvents = 'none';
+                setTimeout(() => document.querySelector('.slider').style.pointerEvents = 'auto', 2000);
+            }
+        }
+    })
+
+</script>
